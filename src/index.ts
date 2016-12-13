@@ -1,3 +1,67 @@
-export * from "./Core";
-export * from "./UI";
-export * from "./Views";
+/* Core */
+export declare class QKLogger {
+    public static output(test: string): void;
+}
+
+export declare class QKModule {
+    // public static delegate: ModuleDelegate;
+    public static delegate: any;
+}
+
+/* UI */
+export declare class QKWindow {
+    public jsRootView: QKView;
+}
+
+/* UI Views */
+export declare class QKView {
+    /* JavaScript Interop */
+    // public jsView: View;
+    public jsView: any;
+
+    /* Positioning */
+    // public jsRect: Rect;
+    public jsRect: any;
+
+    /* View hierarchy */
+    public readonly jsSubviews: QKView[];
+    public readonly jsSuperview?: QKView;
+    public jsAddSubview(view: QKView, index: number): void;
+    public jsRemoveFromSuperview(): void;
+
+    /* Events */
+
+    /* Layout */
+
+    /* Visibility */
+    public jsHidden: boolean;
+
+    /* Style */
+    // public jsBackgroundColor: Color;
+    public jsBackgroundColor: any;
+    public jsAlpha: number;
+    // public jsShadow: Shadow | undefined;
+    public jsShadow: any | undefined;
+    public jsCornerRadius: number;
+
+    /* Initiator */
+    /// Creates a new view with a JSView.
+    public constructor();
+}
+
+export declare class QKButton extends QKView {
+    public jsTitle: string;
+}
+
+export declare class QKLabel extends QKView {
+    public jsText: string;
+    // public jsFont: Font;
+    public jsFont: any;
+    // public jsColor: Color;
+    public jsColor: any;
+    public jsLineCount: number;
+    // public jsLineBreakMode: LineBreakMode;
+    public jsLineBreakMode: any;
+    // public jsAlignmentMode: TextAlignmentMode;
+    public jsAlignmentMode: any;
+}
