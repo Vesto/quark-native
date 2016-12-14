@@ -4,7 +4,6 @@ export declare class QKLogger {
 }
 
 export declare class QKModule {
-    // public static delegate: ModuleDelegate;
     public static delegate: any;
 }
 
@@ -16,12 +15,10 @@ export declare class QKWindow {
 /* UI Views */
 export declare class QKView {
     /* JavaScript Interop */
-    // public jsView: View;
-    public jsView: any;
+    public jsView: any; // View
 
     /* Positioning */
-    // public jsRect: Rect;
-    public jsRect: any;
+    public jsRect: any; // Rect
 
     /* View hierarchy */
     public readonly jsSubviews: QKView[];
@@ -37,11 +34,9 @@ export declare class QKView {
     public jsHidden: boolean;
 
     /* Style */
-    // public jsBackgroundColor: Color;
-    public jsBackgroundColor: any;
+    public jsBackgroundColor: any; // Color
     public jsAlpha: number;
-    // public jsShadow: Shadow | undefined;
-    public jsShadow: any | undefined;
+    public jsShadow: any | undefined; // Shadow | undefined
     public jsCornerRadius: number;
 
     /* Initiator */
@@ -55,13 +50,9 @@ export declare class QKButton extends QKView {
 
 export declare class QKLabel extends QKView {
     public jsText: string;
-    // public jsFont: Font;
-    public jsFont: any;
-    // public jsColor: Color;
-    public jsColor: any;
+    public jsFont: any; // Font
+    public jsColor: any; // Color
     public jsLineCount: number;
-    // public jsLineBreakMode: LineBreakMode;
-    public jsLineBreakMode: any;
-    // public jsAlignmentMode: TextAlignmentMode;
-    public jsAlignmentMode: any;
+    public jsLineBreakMode: any; // LineBreakMode
+    public jsAlignmentMode: any; // TextAlignmentMode
 }
